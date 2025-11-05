@@ -1,5 +1,3 @@
-Bien sûr ! Voici les solutions détaillées pour tous les exercices :
-
 ## Solutions Complètes
 
 ### **Exercices sur les Interpréteurs**
