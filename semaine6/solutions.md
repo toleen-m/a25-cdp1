@@ -275,11 +275,33 @@ print(phrase3)
 ### 7.3 : Code à Corriger
 
 ```python
-def afficher_infos(nom, *autres):
-    print(f"Nom: {nom}")
-    print(f"Autres informations: {autres}")
+# EXERCICE 7.3 - SOLUTION CORRIGÉE
+# Le problème : *args doit toujours être le dernier paramètre avant les paramètres nommés obligatoires
 
-afficher_infos("Alice", "Développeuse", "Paris", 25)
+def afficher_infos(nom, age, *infos):
+    # Correction : mettre les paramètres obligatoires d'abord, puis *infos
+    print(f"Nom: {nom}")
+    print(f"Age: {age} ans")
+
+    # Afficher les autres infos si elles existent
+    if infos:
+        print("Autres informations:")
+        for info in infos:
+            print(f"  - {info}")
+    else:
+        print("Pas d'autres informations")
+
+# Test 1 - Avec plusieurs informations supplémentaires
+print("=== Test 1 ===")
+afficher_infos("Alice", 25, "Développeuse", "Paris", "Python")
+
+# Test 2 - Sans informations supplémentaires
+print("\n=== Test 2 ===")
+afficher_infos("Bob", 30)
+
+# Test 3 - Avec informations supplémentaires
+print("\n=== Test 3 ===")
+afficher_infos("Charlie", 28, "Ingénieur", "Lyon", "Java")
 ```
 
 ## Solution Exercice 8

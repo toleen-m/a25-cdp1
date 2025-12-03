@@ -219,12 +219,30 @@ print(phrase3)
 ### 7.3 : Code à Corriger
 
 ```python
-def afficher_infos(nom, *autres):
-    print(f"Nom: {nom}")
-    print(f"Autres: {autres}")
+# EXERCICE 7.3 - CODE À CORRIGER
+# Ce code contient des erreurs avec les paramètres indéfinis
 
-# Problème avec l'appel
-afficher_infos("Alice", "Développeuse", "Paris", 25)
+def afficher_infos(*infos, nom, age):
+    # Devrait afficher toutes les informations
+    print(f"Nom: {nom}")
+    print(f"Age: {age} ans")
+
+    # Afficher les autres infos
+    print("Autres informations:")
+    for info in infos:
+        print(f"  - {info}")
+
+# Test 1 - Avec plusieurs informations supplémentaires
+print("=== Test 1 ===")
+afficher_infos("Développeuse", "Paris", "Python", nom="Alice", age=25)
+
+# Test 2 - Sans informations supplémentaires
+print("\n=== Test 2 ===")
+afficher_infos(nom="Bob", age=30)
+
+# Test 3 - Problème ici
+print("\n=== Test 3 ===")
+afficher_infos("Ingénieur", "Lyon", "Java", "Charlie", 28)
 ```
 
 ## Exercice 8 : Projets Complets
