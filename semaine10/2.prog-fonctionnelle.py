@@ -58,12 +58,16 @@ def is_majeur(item):
 print(list(filter(is_majeur, la_liste)))
 
 # ------ zip 
-une_liste_a = [1, 2, 3, 4]
-une_liste_b = ['a', 'b', 'c']
 print("-------- utilisation de zip --------")
-print(list(zip(une_liste_a, une_liste_b)))
+liste_1 = [1, 2, 3]
+liste_2 = ["a", "b", "c"]
 
-une_liste_c = ["ID", "Name", "email", "password"]
+print(list(zip(liste_1, liste_2)))
+
+une_liste_c = ["ID", "Name", "email", "password", "birthday"]
 une_liste_d = ["12454", "Mousseau Gerard", "g.mousseau@gmail.com", "@SDFJO$()"]
 
-print(dict(zip(une_liste_c, une_liste_d, strict=True)))
+print(list(zip(une_liste_c, une_liste_d, strict=True)))
+
+
+
