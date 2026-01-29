@@ -55,7 +55,7 @@ def calculatrice():
 calculatrice()
 ```
 
-## Questions pour guider les étudiants
+## Questions pour vous guider
 
 1. Quelle exception est levée lorsque vous essayez de convertir en nombre une chaîne qui ne contient pas de nombre valide ?
 2. Quelle exception est levée lorsque vous essayez de diviser par zéro ?
