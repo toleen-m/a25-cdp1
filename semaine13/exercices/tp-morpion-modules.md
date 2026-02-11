@@ -2,7 +2,7 @@
 
 ## Objectif
 
-Vous devez transformer un jeu de morpion écrit dans un seul fichier en un projet structuré utilisant **des modules et un package Python**.
+Vous devez transformer un jeu de morpion écrit dans un seul fichier en un projet structuré utilisant **des modules et un package Python**. https://github.com/liliaouldhocine/a25-cdp1/blob/main/semaine5/jeu-morpion.py
 
 Ce travail vous permettra de comprendre :
 

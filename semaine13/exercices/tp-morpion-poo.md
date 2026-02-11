@@ -2,7 +2,7 @@
 
 ## Objectif
 
-Vous devez créer une version du morpion utilisant la **programmation orientée objet (POO)** et un **package Python**.
+Vous devez créer une version du morpion utilisant la **programmation orientée objet (POO)** et un **package Python**. https://github.com/liliaouldhocine/a25-cdp1/blob/main/semaine5/jeu-morpion.py
 
 Ce travail vous permettra de comprendre :
 
