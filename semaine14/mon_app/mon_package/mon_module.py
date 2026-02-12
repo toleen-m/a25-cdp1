@@ -1,5 +1,14 @@
+class MyCustomTypeError(Exception):
+    def __init__(self, message) -> None:
+        self.message = message
+
+
 
 def my_split(string, char=" "):
+    if not isinstance(string, str):
+        raise MyCustomTypeError("Vous n'avez pas entré une string")
+
+
     res = []
     current_string = []
     for c in string:
