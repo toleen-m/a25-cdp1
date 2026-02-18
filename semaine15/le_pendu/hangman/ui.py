@@ -31,3 +31,29 @@ class ConsoleUI:
 
     def message(self, message):
         print(message)
+
+    def ask_life_count(self):
+        while True: 
+            entree = input("Nombre de vies ? (entre 1 et 15) > ")
+
+            if not entree.isdigit():
+                print("Veuillez entrer un nombre valide.")
+                continue
+
+            entree = int(entree)
+
+            if 1<= entree <= 15:
+                return entree
+            
+            print("Choisissez un nombre entre 1 et 15.")
+
+    def ask_replay(self):
+        while True:
+            entree = input("\nVoulez-vous rejouer o/n > ").strip().lower()
+
+            if entree in ("o", "oui"):
+                return True
+            if entree in ("n", "non"):
+                return False
+            
+            print("Veuillez répondre par o/oui ou n/non")

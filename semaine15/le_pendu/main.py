@@ -11,28 +11,22 @@ from hangman.words import pick_secret_word
 
 def main():
     ui = ConsoleUI()
-    secret_word = pick_secret_word()
-    state = GameState(secret_word, 9)
-
-    game = HangmanGame(state)
-
-    ui.show_status(state.guess_word, state.life)
 
     while True: 
-        letter = ui.ask_letter()
-        already_used = game.play_turn(letter)
+        nbr_vies = ui.ask_life_count()
+        secret_word = pick_secret_word()
+        state = GameState(secret_word, nbr_vies)
+        game = HangmanGame(state)
 
-        if already_used : 
-            ui.message("Lettre déjà utilisée !")
+        game.run(ui)
 
-        ui.show_status(state.guess_word, state.life)
-        if state.is_won():
-            ui.show_win()
+        if ui.ask_replay():
+            ui.message("\nNouvelle partie !")
+        else: 
+            ui.message("\nAu revoir !")
             break
 
-        if state.is_lose():
-            ui.show_lose(state.secret_word)
-            break
+    
 
 if __name__ == "__main__":
     main()

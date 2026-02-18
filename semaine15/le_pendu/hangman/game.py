@@ -35,5 +35,24 @@ class HangmanGame:
             self.game_state.life -=  1
 
         return already_used
+    
+    def run(self, ui):
+        ui.show_status(self.game_state.guess_word, self.game_state.life)
+
+        while True: 
+            letter = ui.ask_letter()
+            already_used = self.play_turn(letter)
+
+            if already_used : 
+                ui.message("Lettre déjà utilisée !")
+
+            ui.show_status(self.game_state.guess_word, self.game_state.life)
+            if self.game_state.is_won():
+                ui.show_win()
+                break
+
+            if self.game_state.is_lose():
+                ui.show_lose(self.game_state.secret_word)
+                break
         
         
